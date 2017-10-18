@@ -1,0 +1,8 @@
+development:
+  url: <%= ENV['DATABASE_URL'].gsub('$RAILS_ENV', 'development') %>
+
+test:
+  url: <%= ENV['DATABASE_URL'].gsub('$RAILS_ENV', 'test') %>
+
+production:
+  url: <%= ENV['DATABASE_URL'].gsub('$RAILS_ENV', 'production') %>

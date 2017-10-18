@@ -1,0 +1,8 @@
+<h2>Upload CSV data</h2>
+<%= form_tag({action: :upload}, method: :put, multipart: true) do %>
+    <label>
+      <%= file_field_tag 'csv_data' %>
+    </label>
+
+    <%= submit_tag('Upload') %>
+<% end %>

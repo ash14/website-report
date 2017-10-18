@@ -1,0 +1,12 @@
+<%= form_tag({action: :index}, method: :get) do %>
+    <label>
+      <span>Enter date</span>
+      <%= date_field(nil, 'date', {
+        value: @date || '',
+        placeholder: 'yyyy-mm-dd',
+        pattern: '[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}'
+      }) %>
+    </label>
+
+    <%= submit_tag('Submit') %>
+<% end %>

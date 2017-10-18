@@ -1,0 +1,10 @@
+<% if user_signed_in? %>
+    <div class="account-info">
+      Signed in as <%= current_user.email %>.
+
+      <%= form_for(resource, as: resource_name,
+          url: destroy_user_session_path, html: { method: :delete }) do |f| %>
+          <%= f.submit 'Log out' %>
+      <% end %>
+    </div>
+<% end %>

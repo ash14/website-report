@@ -1,0 +1,6 @@
+:concurrency:  5
+
+:schedule:
+  exclusions:
+    cron: '*/5 * * * *'   # every 5 minutes
+    class: ExclusionsWorker

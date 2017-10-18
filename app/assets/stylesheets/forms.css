@@ -1,0 +1,12 @@
+form {
+    margin: 20px 0;
+}
+
+form label {
+    display: block;
+    margin: 10px 0;
+}
+
+form label span {
+    display: block;
+}

@@ -1,0 +1,22 @@
+<% if @results.nil? %>
+<% elsif @results.empty? %>
+    No website data found for <%= @date %>
+<% else %>
+    <table>
+      <caption>
+        Report for <%= @date %>
+      </caption>
+
+      <tr>
+        <th>Host</th>
+        <th>Count</th>
+      </tr>
+
+      <% @results.each do |result| %>
+          <tr>
+            <td><%= result.host %></td>
+            <td><%= number_with_delimiter(result.count) %></td>
+          </tr>
+      <% end %>
+    </table>
+<% end %>
